@@ -35,7 +35,7 @@ async def register(username: str, password: str, email: str | None,
 async def login(username: str, password: str,
                 session: Annotated[AsyncSession, Depends(get_session)]):
     user = await session.scalar(select(User).where(User.username == username))
-    print(user.username, user.password)
+    # print(user.username, user.password)
     if user:
         if user.password == password and user.username:
             return {"status_code": "ok", "data": {

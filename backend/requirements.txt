@@ -1,0 +1,6 @@
+streamlit
+aiosqlite
+asyncpg
+fastapi
+sqlalchemy
+uvicorn
